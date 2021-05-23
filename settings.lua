@@ -3,8 +3,8 @@
 --
 --  @setting skeleton.lifetime
 --  @settype int
---  @default 300
-cmer_skeleton.lifetime = tonumber(core.settings:get("skeleton.lifetime")) or 300
+--  @default 900 (15 minutes)
+cmer_skeleton.lifetime = tonumber(core.settings:get("skeleton.lifetime")) or 900
 
 --- Spawn rate frequency.
 --

@@ -2,8 +2,8 @@
 # Entity lifespan.
 #
 # type:    int
-# default: 300
-skeleton.lifetime (Lifespan) int 300 1
+# default: 900
+skeleton.lifetime (Lifespan) int 900 1
 
 # Spawn interval in seconds.
 #
