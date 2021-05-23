@@ -14,5 +14,5 @@ skeleton.spawn_interval (Spawn interval) int 120 1
 # Chance of spawn at interval.
 #
 # type:    int
-# default: 9000
-skeleton.spawn_chance (Spawn chance) int 9000 1
+# default: 7000
+skeleton.spawn_chance (Spawn chance) int 7000 1

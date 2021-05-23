@@ -19,6 +19,6 @@ cmer_skeleton.spawn_interval = tonumber(core.settings:get("skeleton.spawn_interv
 --
 --  @setting skeleton.spawn_chance
 --  @settype int
---  @default 9000
+--  @default 7000
 --  @see [ABM definition](http://minetest.gitlab.io/minetest/definition-tables.html#abm-activeblockmodifier-definition)
-cmer_skeleton.spawn_chance = tonumber(core.settings:get("skeleton.spawn_chance")) or 9000
+cmer_skeleton.spawn_chance = tonumber(core.settings:get("skeleton.spawn_chance")) or 7000
