@@ -63,6 +63,17 @@ cmer.register_mob({
 })
 
 
+if core.global_exists("asm") then
+	asm.addEgg({
+		name = "skeleton",
+		title = "Skeleton",
+		inventory_image = "cmer_skeleton_inv.png",
+		spawn = "cmer:skeleton",
+		ingredients = "cmer:bone",
+	})
+end
+
+
 core.register_craftitem(":cmer:bone", {
 	description = "Bone",
 	inventory_image = "cmer_skeleton_bone.png",
