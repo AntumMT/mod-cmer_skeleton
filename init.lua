@@ -1,6 +1,6 @@
 
 cmer_skeleton = {}
-cmer_skeleton.modname = core.get_current.modname()
+cmer_skeleton.modname = core.get_current_modname()
 cmer_skeleton.modpath = core.get_modpath(cmer_skeleton.modname)
 
 function cmer_skeleton.log(lvl, msg)
