@@ -3,3 +3,4 @@ TODO:
 - register skeleton entity with cmer
 - register egg with asm_spawneggs
 - add bone item
+- add localization support
