@@ -9,6 +9,8 @@ A skeleton mob using the [cmer][] (Creatures Revived) API.
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
+- Textures:
+	- [cmer_skeleton_mesh](http://minetest.fensta.bplaced.net/#id=1141): by I don't know (CC BY-SA 3.0)
 
 ### Requirements:
 
