@@ -11,9 +11,9 @@ cmer_skeleton.lifetime = tonumber(core.settings:get("skeleton.lifetime")) or 900
 --
 --  @setting skeleton.spawn_interval
 --  @settype int
---  @default 600 (10 minutes)
+--  @default 120 (2 minutes)
 --  @see [ABM definition](http://minetest.gitlab.io/minetest/definition-tables.html#abm-activeblockmodifier-definition)
-cmer_skeleton.spawn_interval = tonumber(core.settings:get("skeleton.spawn_interval")) or 10 * 60
+cmer_skeleton.spawn_interval = tonumber(core.settings:get("skeleton.spawn_interval")) or 120
 
 --- Chance of spawn at interval.
 --
