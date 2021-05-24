@@ -1,5 +1,28 @@
 
-cmer.register_mob({
+local zombie_model = nil
+local anim_walk = {start=102, stop=122, speed=15.5}
+local anim_attack = {start=102, stop=122, speed=25}
+
+if core.get_modpath("cmer_zombie") or core.get_modpath("zombie") then
+	zombie_model = "creatures_zombie.b3d"
+end
+
+-- use player model if zombie not installed
+if not zombie_model then
+	if not core.get_modpath("player_api") then
+		error("Compatible model not found (requires one of the following mods: \"cmer_zombie\", \"zombie\", \"player_api\")")
+	end
+
+	zombie_model = "character.b3d"
+	-- I don't know what the correct animations for default player model are
+	--anim_walk = {start=102, stop=122, speed=15.5}
+	--anim_attack = {start=102, stop=122, speed=25}
+
+	cmer_skeleton.log("warning", "using \"" .. zombie_model .. "\" model, may not look right")
+end
+
+
+creatures.register_mob({
 	name = "cmer:skeleton",
 	stats = {
 		hp = 55,
@@ -15,14 +38,14 @@ cmer.register_mob({
 		attack = {chance=0, moving_speed=3,},
 	},
 	model = {
-		mesh = "creatures_zombie.b3d",
+		mesh = zombie_model,
 		textures = {"cmer_skeleton_mesh.png"},
 		collisionbox = {-0.25, -0.01, -0.25, 0.25, 1.65, 0.25},
 		rotation = -90.0,
     animations = {
       idle = {start=0, stop=80, speed=15},
-      walk = {start=102, stop=122, speed=15.5},
-      attack = {start=102, stop=122, speed=25},
+      walk = anim_walk,
+      attack = anim_attack,
       death = {start=81, stop=101, speed=28, loop=false, duration= 2.12},
     },
 	},
