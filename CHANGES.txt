@@ -1,4 +1,8 @@
 
+1.1
+- made compatible with legacy Creatures MOB-Engine
+
+
 1.0
 - created cmer:skeleton entity
 - created cmer:bone item
