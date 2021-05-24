@@ -1,4 +1,7 @@
 
+local S = core.get_translator(cmer_skeleton.modname)
+
+
 local zombie_model = nil
 local anim_walk = {start=102, stop=122, speed=15.5}
 local anim_attack = {start=102, stop=122, speed=25}
@@ -89,7 +92,7 @@ creatures.register_mob({
 if core.global_exists("asm") then
 	asm.addEgg({
 		name = "skeleton",
-		title = "Skeleton",
+		title = S("Skeleton"),
 		inventory_image = "cmer_skeleton_inv.png",
 		spawn = "cmer:skeleton",
 		ingredients = "cmer:bone",
@@ -98,7 +101,7 @@ end
 
 
 core.register_craftitem(":cmer:bone", {
-	description = "Bone",
+	description = S("Bone"),
 	inventory_image = "cmer_skeleton_bone.png",
 	stack_max = 99,
 })
