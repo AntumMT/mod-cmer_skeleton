@@ -25,8 +25,10 @@ if not zombie_model then
 end
 
 
+local mob_name = "creatures:skeleton"
+
 creatures.register_mob({
-	name = "cmer:skeleton",
+	name = ":" .. mob_name,
 	stats = {
 		hp = 55,
 		hostile = true,
@@ -94,7 +96,7 @@ if core.global_exists("asm") then
 		name = "skeleton",
 		title = S("Skeleton"),
 		inventory_image = "cmer_skeleton_inv.png",
-		spawn = "cmer:skeleton",
+		spawn = mob_name,
 		ingredients = "cmer:bone",
 	})
 end
