@@ -2,6 +2,7 @@
 1.1
 - made compatible with legacy Creatures MOB-Engine
 - added localization support
+- added nametag
 
 
 1.0
