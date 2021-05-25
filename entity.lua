@@ -101,6 +101,9 @@ if core.global_exists("asm") then
 		ingredients = "cmer:bone",
 	})
 end
+if not core.registered_items["creatures:skeleton"] then
+	core.register_alias("creatures:skeleton", "spawneggs:skeleton")
+end
 
 
 core.register_craftitem(":cmer:bone", {
@@ -108,3 +111,6 @@ core.register_craftitem(":cmer:bone", {
 	inventory_image = "cmer_skeleton_bone.png",
 	stack_max = 99,
 })
+if not core.registered_items["creatures:bone"] then
+	core.register_alias("creatures:bone", "cmer:bone")
+end
