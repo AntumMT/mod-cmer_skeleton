@@ -29,6 +29,7 @@ local mob_name = "creatures:skeleton"
 
 creatures.register_mob({
 	name = ":" .. mob_name,
+	nametag = creatures.feature_nametags and S("Skeleton") or nil,
 	stats = {
 		hp = 55,
 		hostile = true,
