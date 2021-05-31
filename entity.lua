@@ -78,10 +78,10 @@ creatures.register_mob({
 	spawning = {
 		abm_nodes = {
 			spawn_on = {
-				"default:sand",
-				"default:desert_sand",
-				"default:stone",
-				"default:desert_stone",
+				"group:sand",
+				"group:stone",
+				"nether:rack",
+				"nether:rack_deep",
 			},
 		},
 		abm_interval = cmer_skeleton.spawn_interval,
