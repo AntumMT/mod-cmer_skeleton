@@ -4,8 +4,6 @@
 
 A skeleton mob using the [cmer][] (Creatures Revived) API.
 
-***Status:** currently not functional*
-
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
