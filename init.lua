@@ -5,6 +5,7 @@ cmer_skeleton.modpath = core.get_modpath(cmer_skeleton.modname)
 
 -- support mob libraries in order of preference
 local mob_libs = {
+	"mobs",
 	"cmer",
 	"creatures",
 }

@@ -1,6 +1,8 @@
 
 v1.1
 ----
+- mob library support:
+	- mobs_redo
 - made compatible with legacy Creatures MOB-Engine
 - added localization support
 - added Spanish translation
