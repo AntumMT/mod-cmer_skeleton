@@ -1,5 +1,4 @@
 
 TODO:
 - port to mobkit
-- don't shut down completely if compatible mob library not found
 - add setting to change mob library preference order
