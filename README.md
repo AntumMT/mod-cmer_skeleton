@@ -2,7 +2,7 @@
 
 ### Description:
 
-A skeleton mob using the [cmer][] (Creatures Revived) API.
+A skeleton mob using the [cmer (Creatures Revived)](https://forum.minetest.net/viewtopic.php?t=26684) or [mobs_redo](https://content.minetest.net/packages/TenPlus1/mobs/) API.
 
 ### Licensing:
 
@@ -13,16 +13,20 @@ A skeleton mob using the [cmer][] (Creatures Revived) API.
 
 ### Requirements:
 
-Depends: [cmer][], [cmer_zombie][]
+```
+Depends: none
 
-Optional depends: [asm_spawneggs][]
+Optional depends:
+  - mobs
+  - cmer
+  - cmer_zombie
+  - creatures
+  - zombie
+  - asm_spawneggs
+  - sounds
+```
 
 ### Links:
 
 - [Changelog](changelog.txt)
 - [TODO](TODO.txt)
-
-
-[cmer]: https://forum.minetest.net/viewtopic.php?t=26684
-[cmer_zombie]: https://github.com/AntumMT/mod-cmer/tree/zombie
-[asm_spawneggs]: https://content.minetest.net/packages/AntumDeluge/asm_spawneggs/
