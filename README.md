@@ -30,6 +30,7 @@ Optional depends:
 
 ### Links:
 
+- [![ContentDB](https://content.minetest.net/packages/AntumDeluge/skeleton/shields/title/)](https://content.minetest.net/packages/AntumDeluge/skeleton/)
 - [Forum](https://forum.minetest.net/viewtopic.php?t=27168)
 - [Git repo](https://github.com/AntumMT/mod-skeleton)
 - [Changelog](changelog.txt)
