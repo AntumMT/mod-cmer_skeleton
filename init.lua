@@ -1,12 +1,30 @@
 
--- check for compatible engine
-if not core.global_exists("cmer") and not core.global_exists("creatures") then
-	error("A compatible API was not found, please install \"cmer\" or \"creatures\"")
-end
-
 cmer_skeleton = {}
 cmer_skeleton.modname = core.get_current_modname()
 cmer_skeleton.modpath = core.get_modpath(cmer_skeleton.modname)
+
+-- support mob libraries in order of preference
+local mob_libs = {
+	"cmer",
+	"creatures",
+}
+
+for _, ml in ipairs(mob_libs) do
+	if core.get_modpath(ml) then
+		cmer_skeleton.lib = ml
+		break
+	end
+end
+
+-- check for compatible library
+if not cmer_skeleton.lib then
+	error("a compatible mob library was not found, please install one of the following: "
+		.. table.concat(mob_libs, ", "))
+end
+
+if cmer_skeleton.lib == "creatures" then
+	cmer_skeleton.lib = "cmer"
+end
 
 function cmer_skeleton.log(lvl, msg)
 	if not msg then

@@ -29,70 +29,71 @@ end
 
 local mob_name = "creatures:skeleton"
 
-creatures.register_mob({
-	name = ":" .. mob_name,
-	nametag = creatures.feature_nametags and S("Skeleton") or nil,
-	stats = {
-		hp = 55,
-		hostile = true,
-		lifetime = cmer_skeleton.lifetime,
-		can_jump = 1,
-		can_swim = true,
-		has_knockback = true,
-	},
-	modes = {
-		idle = {chance=0.3,},
-		walk = {chance=0.7, moving_speed=1,},
-		attack = {chance=0, moving_speed=3,},
-	},
-	model = {
-		mesh = zombie_model,
-		textures = {"cmer_skeleton_mesh.png"},
-		collisionbox = {-0.25, -0.01, -0.25, 0.25, 1.65, 0.25},
-		rotation = -90.0,
-    animations = {
-      idle = {start=0, stop=80, speed=15},
-      walk = anim_walk,
-      attack = anim_attack,
-      death = {start=81, stop=101, speed=28, loop=false, duration= 2.12},
-    },
-	},
-	sounds = {
-		on_death = zombie_sounds.on_death,
-		random = {
-			idle = {name="cmer_skeleton_bones", gain=1.0,},
-			walk = {name="cmer_skeleton_bones", gain=1.0,},
-			attack = {name="cmer_skeleton_bones", gain=1.0,},
-		},
-	},
+local base_def = {
+	name = mob_name,
+	nametag = S("Skeleton"),
+	hp_min = 55,
+	hp_max = 55,
+	hostile = true,
+	knockback = true,
+	sneaky = false,
+	floats = true,
+	stepheight = 1,
+	collisionbox = {-0.25, -0.01, -0.25, 0.25, 1.65, 0.25},
+	rotation = -90.0,
+	mesh = zombie_model,
+	textures = {"cmer_skeleton_mesh.png"},
 	drops = {
-		{"creatures:bone", 1, chance=1},
+		--{"creatures:bone", 1, chance=1},
+		{name="creatures:bone", min=1, max=1, chance=1},
+	},
+	spawn = {
+		interval = cmer_skeleton.spawn_interval,
+		chance = cmer_skeleton.spawn_chance,
+		nodes = {
+			"group:sand",
+			"group:stone",
+			"nether:rack",
+			"nether:rack_deep",
+		},
+		light_range = {min=0, max=8},
+		height_range = {min=-31000, max=31000},
+		count = {min=1, max=2},
 	},
 	combat = {
-		attack_damage = 13,
-		attack_radius = 2.0,
-		search_enemy = true,
-		search_type = "player",
-		search_radius = 20,
+		radius = 2.0,
+		damage = 13,
+		chance = 100,
 	},
-	spawning = {
-		abm_nodes = {
-			spawn_on = {
-				"group:sand",
-				"group:stone",
-				"nether:rack",
-				"nether:rack_deep",
-			},
-		},
-		abm_interval = cmer_skeleton.spawn_interval,
-		abm_chance = cmer_skeleton.spawn_chance,
-		max_number = 1,
-		number = {min=1, max=2},
-		time_range = {min=0, max=23999},
-		light = {min=0, max=8},
-		height_limit = {min=-31000, max=31000},
+	speed = {
+		walk = 1,
+		run = 3,
 	},
-})
+	search = {
+		radius = 20,
+		target = "player",
+	},
+	mode_chance = {
+		idle = 0.3,
+		walk = 0.7,
+	},
+	sounds = {
+		random = "cmer_skeleton_bones",
+		death = zombie_sounds.on_death,
+		war_cry = nil,
+		attack = nil,
+		damage = nil,
+	},
+	animation = {
+		idle = {start=0, stop=80, speed=15},
+		walk = anim_walk,
+		run = {},
+		attack = anim_attack,
+		death = {start=81, stop=101, speed=28, loop=false, rotate=false, duration=2.12},
+	},
+}
+
+dofile(cmer_skeleton.modpath .. "/register/" .. cmer_skeleton.lib .. ".lua")(base_def)
 
 
 if core.global_exists("asm") then
