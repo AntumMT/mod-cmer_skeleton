@@ -4,6 +4,8 @@
 
 A skeleton mob using the [cmer (Creatures Revived)](https://forum.minetest.net/viewtopic.php?t=26684) or [mobs_redo](https://content.minetest.net/packages/TenPlus1/mobs/) API.
 
+<img src="screenshot.png" width="250" />
+
 ### Licensing:
 
 - Code: [MIT](LICENSE.txt)
