@@ -30,5 +30,7 @@ Optional depends:
 
 ### Links:
 
+- [Forum](https://forum.minetest.net/viewtopic.php?t=27168)
+- [Git repo](https://github.com/AntumMT/mod-skeleton)
 - [Changelog](changelog.txt)
 - [TODO](TODO.txt)
