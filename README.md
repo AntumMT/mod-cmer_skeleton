@@ -10,18 +10,20 @@ A skeleton mob using the [cmer (Creatures Revived)](https://forum.minetest.net/v
 - Textures:
 	- [cmer_skeleton_mesh](http://minetest.fensta.bplaced.net/#id=1141): by I don't know (CC BY-SA 3.0)
 	- [cmer_skeleton_bone](https://opengameart.org/node/3755): by bart (CC0)
+- Models:
+	- [creatures_zombie.b3d](https://github.com/BlockMen/cme): by BlockMen (CC-BY-SA 3.0)
 
 ### Requirements:
 
 ```
+Minetest min version: 5.0
+
 Depends: none
 
 Optional depends:
   - mobs
   - cmer
-  - cmer_zombie
   - creatures
-  - zombie
   - asm_spawneggs
   - sounds
 ```

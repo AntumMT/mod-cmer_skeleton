@@ -8,6 +8,7 @@ v1.1
 - added Spanish translation
 - added nametag
 - added sounds
+- added model by BlockMen
 
 
 v1.0

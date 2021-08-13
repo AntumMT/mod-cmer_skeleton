@@ -1,5 +1,4 @@
 
 TODO:
 - port to mobkit
-- fix walking animation if cmer_zombie not available
 - rename
