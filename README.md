@@ -21,7 +21,7 @@ Optional depends: [asm_spawneggs][]
 
 ### Links:
 
-- [Changelog](CHANGES.txt)
+- [Changelog](changelog.txt)
 - [TODO](TODO.txt)
 
 
