@@ -1,0 +1,12 @@
+{
+	"type": "MOD",
+	"name": "skeleton",
+	"title": "Skeleton",
+	"short_description": "A skeleton mob.",
+	"license": "MIT",
+	"media_license": "CC-BY-SA-3.0",
+	"tags": ["mobs"],
+	"repo": "https://github.com/AntumMT/mod-skeleton",
+	"issue_tracker": "https://github.com/AntumMT/mod-skeleton/issues",
+	"forums": 27168
+}
