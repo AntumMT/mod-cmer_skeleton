@@ -69,7 +69,7 @@ local register = function(def)
 		table.insert(new_def.drops, {name=drop.name, min=drop.min, max=drop.max, chance=1/drop.chance})
 	end
 
-	mobs:register_mob(":" .. def.name, new_def)
+	mobs:register_mob(def.name, new_def)
 
 	mobs:spawn({
 		name = def.name,

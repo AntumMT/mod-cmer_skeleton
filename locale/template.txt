@@ -1,4 +1,4 @@
-# textdomain:cmer_skeleton
+# textdomain:skeleton
 
 # Translators:
 

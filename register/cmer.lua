@@ -8,12 +8,12 @@
 
 local register = function(def)
 	local new_def = {
-		name = ":" .. def.name,
+		name = def.name,
 		nametag = creatures.feature_nametags and def.nametag or nil,
 		stats = {
 			hp = def.hp_max,
 			hostile = def.hostile,
-			lifetime = cmer_skeleton.lifetime,
+			lifetime = skeleton.lifetime,
 			can_jump = def.stepheight,
 			can_swim = def.floats,
 			has_knockback = def.knockback,

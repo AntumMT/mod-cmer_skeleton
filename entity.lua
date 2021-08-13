@@ -1,5 +1,5 @@
 
-local S = core.get_translator(cmer_skeleton.modname)
+local S = core.get_translator(skeleton.modname)
 
 local bones_sound, death_sound
 if core.global_exists("sounds") then
@@ -12,7 +12,7 @@ if core.global_exists("sounds") then
 end
 
 
-local mob_name = "creatures:skeleton"
+local mob_name = "skeleton:skeleton"
 
 local base_def = {
 	name = mob_name,
@@ -27,13 +27,13 @@ local base_def = {
 	collisionbox = {-0.25, -0.01, -0.25, 0.25, 1.65, 0.25},
 	rotation = -90.0,
 	mesh = "creatures_zombie.b3d",
-	textures = {"cmer_skeleton_mesh.png"},
+	textures = {"skeleton_mesh.png"},
 	drops = {
-		{name="creatures:bone", min=1, max=1, chance=1},
+		{name="skeleton:bone", min=1, max=1, chance=1},
 	},
 	spawn = {
-		interval = cmer_skeleton.spawn_interval,
-		chance = cmer_skeleton.spawn_chance,
+		interval = skeleton.spawn_interval,
+		chance = skeleton.spawn_chance,
 		nodes = {
 			"group:sand",
 			"group:stone",
@@ -77,28 +77,27 @@ local base_def = {
 	},
 }
 
-dofile(cmer_skeleton.modpath .. "/register/" .. cmer_skeleton.lib .. ".lua")(base_def)
+dofile(skeleton.modpath .. "/register/" .. skeleton.lib .. ".lua")(base_def)
 
 
 if core.global_exists("asm") then
 	asm.addEgg({
 		name = "skeleton",
 		title = S("Skeleton"),
-		inventory_image = "cmer_skeleton_inv.png",
+		inventory_image = "skeleton_inv.png",
 		spawn = mob_name,
-		ingredients = "creatures:bone",
+		ingredients = "skeleton:bone",
 	})
 end
-if not core.registered_items["creatures:skeleton"] then
-	core.register_alias("creatures:skeleton", "spawneggs:skeleton")
+
+-- use entity name for spawnegg alias
+if not core.registered_items["skeleton:skeleton"] then
+	core.register_alias("skeleton:skeleton", "spawneggs:skeleton")
 end
 
 
-core.register_craftitem(":creatures:bone", {
+core.register_craftitem("skeleton:bone", {
 	description = S("Bone"),
-	inventory_image = "cmer_skeleton_bone.png",
+	inventory_image = "skeleton_bone.png",
 	stack_max = 99,
 })
-if not core.registered_items["cmer:bone"] then
-	core.register_alias("cmer:bone", "creatures:bone")
-end
