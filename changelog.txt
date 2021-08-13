@@ -1,12 +1,15 @@
 
-1.1
+v1.1
+----
 - made compatible with legacy Creatures MOB-Engine
 - added localization support
+- added Spanish translation
 - added nametag
 - added sounds
 
 
-1.0
+v1.0
+----
 - created cmer:skeleton entity
 - created cmer:bone item
 - created spawneggs:skeleton with asm_spawneggs

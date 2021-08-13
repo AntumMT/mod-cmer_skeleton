@@ -2,5 +2,4 @@
 TODO:
 - port to mobs_redo
 - port to mobkit
-- add Spanish translation
 - fix walking animation if cmer_zombie not available
