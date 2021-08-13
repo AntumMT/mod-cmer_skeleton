@@ -2,3 +2,4 @@
 TODO:
 - port to mobkit
 - rename
+- don't shut down completely if compatible mob library not found
