@@ -1,4 +1,6 @@
-Translated by:
+# textdomain:cmer_skeleton
+
+# Translators:
 
 
 Skeleton=
