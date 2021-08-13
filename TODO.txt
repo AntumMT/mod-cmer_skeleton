@@ -1,2 +1,5 @@
 
 TODO:
+- port to mobs_redo
+- port to mobkit
+- add Spanish translation
