@@ -10,8 +10,6 @@ A skeleton mob using the [cmer][] (Creatures Revived) API.
 - Textures:
 	- [cmer_skeleton_mesh](http://minetest.fensta.bplaced.net/#id=1141): by I don't know (CC BY-SA 3.0)
 	- [cmer_skeleton_bone](https://opengameart.org/node/3755): by bart (CC0)
-- Sounds:
-	- [cmer_skeleton_bones](https://opengameart.org/node/16324): by AntumDeluge (CC0)
 
 ### Requirements:
 

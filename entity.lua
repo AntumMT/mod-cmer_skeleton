@@ -1,15 +1,23 @@
 
 local S = core.get_translator(cmer_skeleton.modname)
 
+local bones_sound, death_sound
+if core.global_exists("sounds") then
+	if sounds.skeleton then
+		bones_sound = sounds.skeleton:get(1)
+	end
+	if sounds.zombie_death then
+		death_sound = sounds.zombie_death:get(1)
+	end
+end
 
-local zombie_model = nil
+local zombie_model
 local zombie_sounds = {}
 local anim_walk = {start=102, stop=122, speed=15.5}
 local anim_attack = {start=102, stop=122, speed=25}
 
 if core.get_modpath("cmer_zombie") or core.get_modpath("zombie") then
 	zombie_model = "creatures_zombie.b3d"
-	zombie_sounds.on_death = {name="creatures_zombie_death", gain=0.7, distance=10}
 end
 
 -- use player model if zombie not installed
@@ -44,7 +52,6 @@ local base_def = {
 	mesh = zombie_model,
 	textures = {"cmer_skeleton_mesh.png"},
 	drops = {
-		--{"creatures:bone", 1, chance=1},
 		{name="creatures:bone", min=1, max=1, chance=1},
 	},
 	spawn = {
@@ -78,8 +85,8 @@ local base_def = {
 		walk = 0.7,
 	},
 	sounds = {
-		random = "cmer_skeleton_bones",
-		death = zombie_sounds.on_death,
+		random = bones_sound,
+		death = death_sound,
 		war_cry = nil,
 		attack = nil,
 		damage = nil,
