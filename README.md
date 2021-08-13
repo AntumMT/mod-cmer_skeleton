@@ -28,6 +28,8 @@ Optional depends:
   - sounds
 ```
 
+***NOTE:** `mobs` & `cmer` are listed as optional depends so that either can be used. But it is required that at least one is installed. `mobs` will take precedence over `cmer`.*
+
 ### Links:
 
 - [![ContentDB](https://content.minetest.net/packages/AntumDeluge/skeleton/shields/title/)](https://content.minetest.net/packages/AntumDeluge/skeleton/)
