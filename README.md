@@ -10,7 +10,7 @@ A skeleton mob using the [cmer (Creatures Revived)](https://forum.minetest.net/v
 
 - Code: [MIT](LICENSE.txt)
 - Textures:
-	- [skeleton_mesh](http://minetest.fensta.bplaced.net/#id=1141): by I don't know (CC BY-SA 3.0)
+	- [skeleton_mesh](https://github.com/MultiCraft/MultiCraft_game/blob/df93498/files/mobs/mobs_monster/textures/mobs_skeleton.png): by MoNTE48 (CC BY-SA 4.0)
 	- [skeleton_bone](https://opengameart.org/node/3755): by bart (CC0)
 - Models:
 	- [creatures_zombie.b3d](https://github.com/BlockMen/cme): by BlockMen (CC-BY-SA 3.0)

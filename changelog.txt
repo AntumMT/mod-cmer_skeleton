@@ -1,4 +1,9 @@
 
+next
+----
+- fix skeleton_mesh.png license & attribute to MoNTE48
+
+
 v1.1
 ----
 - mob library support:
