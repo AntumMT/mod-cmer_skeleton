@@ -100,4 +100,5 @@ core.register_craftitem("skeleton:bone", {
 	description = S("Bone"),
 	inventory_image = "skeleton_bone.png",
 	stack_max = 99,
+	groups = {bone = 1},
 })
